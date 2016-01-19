@@ -1,0 +1,74 @@
+<!--
+  ~ Copyright 2016 Diego Rossi (@_HellPie)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~ Bottom Bar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <style name="BottomBar" parent="@android:style/Widget.Material.ActionButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_bar_height</item>
+        <item name="android:drawablePadding">@dimen/bottom_bar_drawable_padding</item>
+        <item name="android:minWidth">@dimen/bottom_bar_minimum</item>
+        <item name="android:minHeight">@dimen/bottom_bar_height</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAppearance">@style/BottomBar.TextStyle</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="BottomBar.Next">
+        <item name="android:paddingEnd">@dimen/bottom_bar_button_padding</item>
+        <item name="android:gravity">center_vertical|end</item>
+        <item name="android:drawableEnd">@drawable/bottom_bar_button_next</item>
+        <item name="android:text">@string/bottom_bar_button_next</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="BottomBar.Back">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:paddingStart">@dimen/bottom_bar_button_padding</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:drawableStart">@drawable/bottom_bar_button_back</item>
+        <item name="android:text">@string/bottom_bar_button_back</item>
+    </style>
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~ Text Styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <style name="BottomBar.TextStyle" parent="@android:style/TextAppearance.Material.Button">
+        <item name="android:textSize">@dimen/bottom_bar_text_size</item>
+        <item name="android:textColor">@color/bottom_bar_button_text</item>
+    </style>
+
+</resources>
