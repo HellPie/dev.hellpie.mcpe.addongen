@@ -15,12 +15,16 @@
   ~ limitations under the License.
   -->
 
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24"
-        android:viewportHeight="24">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <path android:fillColor="@color/bottom_bar_element_enabled"
-        android:pathData="M15.41,7.41L14,6l-6,6l6,6l1.41-1.41L10.83,12L15.41,7.41Z" />
-</vector>
+    <include layout="@layout/header_full" />
+
+    <RelativeLayout
+        android:id="@+id/page_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/bottom_bar" />
+</RelativeLayout>

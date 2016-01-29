@@ -21,8 +21,6 @@
         android:viewportWidth="24"
         android:viewportHeight="24">
 
-    <path
-        android:name="arrow"
-        android:fillColor="@color/bottom_bar_text_enabled"
+    <path android:fillColor="@color/bottom_bar_element_enabled"
         android:pathData="M10,6L8.59,7.41L13.17,12l-4.58,4.59L10,18l6-6L10,6Z" />
 </vector>

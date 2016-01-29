@@ -15,17 +15,13 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              style="@style/BottomBar"
-              android:id="@+id/button_bar"
-              android:background="@color/bottom_bar">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@id/bottom_bar"
+                style="@style/BottomBar">
 
-    <Button
-        style="@style/BottomBar.Back"
-        android:id="@+id/prev_button"
-        android:layout_weight="1"/>
+    <Button android:id="@id/bottom_bar_back"
+            style="@style/BottomBar.Button.Back"/>
 
-    <Button
-        style="@style/BottomBar.Next"
-        android:id="@+id/next_button" />
-</LinearLayout>
+    <Button android:id="@id/bottom_bar_next"
+            style="@style/BottomBar.Button.Next"/>
+</RelativeLayout>

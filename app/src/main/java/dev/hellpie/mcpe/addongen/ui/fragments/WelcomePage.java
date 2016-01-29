@@ -14,26 +14,34 @@
  * limitations under the License.
  */
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+package dev.hellpie.mcpe.addongen.ui.fragments;
 
-buildscript {
-    repositories {
-        jcenter()
+import dev.hellpie.mcpe.addongen.R;
+
+public class WelcomePage extends Page {
+
+    @Override
+    protected void onPageInit() {
+
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0-alpha8'
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+    @Override
+    protected void onPageSave() {
+
     }
-}
 
-allprojects {
-    repositories {
-        jcenter()
+    @Override
+    protected boolean onBackPage() {
+        return false;
     }
-}
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+    @Override
+    protected boolean onNextPage() {
+        return false;
+    }
+
+    @Override
+    protected final int getInflatableLayout() {
+        return R.layout.page_welcome;
+    }
 }
