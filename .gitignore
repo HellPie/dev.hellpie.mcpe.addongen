@@ -92,6 +92,7 @@ captures/
 .idea/shelf/
 .idea/workspace.xml
 .idea/tasks.xml
+.idea/misc.xml
 
 # - IDEA Configuration (user-specific data)
 .idea/dataSources.ids
