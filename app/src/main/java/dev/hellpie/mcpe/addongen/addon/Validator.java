@@ -18,14 +18,24 @@ package dev.hellpie.mcpe.addongen.addon;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
+import android.widget.Toast;
+
+import dev.hellpie.mcpe.addongen.R;
 
 public class Validator {
 
     public static boolean validateAddonName(@NonNull String name, Context caller) {
-
+        if (name.length() > 50) {
+            alertAndReturn(R.string.senpai_too_long)
+        }
     }
 
-    private static boolean alertAndReturn(String message, Context caller) {
-        if ()
+    private static boolean alertAndReturn(@StringRes int message, Context caller) {
+        if (caller != null) {
+            Toast.makeText(caller, caller.getString(message), Toast.LENGTH_SHORT).show();
+        }
+
+        return false;
     }
 }

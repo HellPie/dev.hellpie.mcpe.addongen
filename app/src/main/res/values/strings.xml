@@ -25,7 +25,7 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~ Error Messages ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <string name="senpai_too_long">Consider making the name shorter than 50 characters.</string>
     <string name="pedophile_version">This MC:PE version is yet to be born.</string>
-    <string name="necrofile_version">This MC:PE version is not the latest one.</string>
+    <string name="necrophile_version">This MC:PE version is not the latest one.</string>
     <string name="package_deaf">This is not a valid Java package name.</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~ Pages Placeholders ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
