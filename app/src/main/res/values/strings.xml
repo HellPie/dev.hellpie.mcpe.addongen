@@ -23,14 +23,18 @@
     <string name="bottom_bar_button_next">Next</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~ Error Messages ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <string name="senpai_too_long">Consider making the name shorter than 50 characters.</string>
-    <string name="pedophile_version">This MC:PE version is yet to be born.</string>
-    <string name="necrophile_version">This MC:PE version is not the latest one.</string>
-    <string name="package_deaf">This is not a valid Java package name.</string>
+    <string name="name_too_long">Consider making the name shorter than 50 characters.</string>
+    <string name="version_not_valid">This is not a valid MC:PE version number.</string>
+    <string name="version_unreleased">This MC:PE version is yet to be born.</string>
+    <string name="version_obsolete">This MC:PE version is not the latest one.</string>
+    <string name="package_not_valid">This is not a valid Java package name.</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~ Pages Placeholders ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <string name="label_addon_name">Addon Name Placeholder - by @_HellPie</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~ Pages Explanations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <string name="text_addon_name">This is the name of your addon, it will be shown in BlockLauncher\'s addons Settings, you may want to synthesize in a word the concept of your addon, what it is all about.\n\nYou can also put your name there, to let anyone else know who made that mod, but remember not to go over 50 characters in total to not occupy too much space!</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~ Addon Constants ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <string name="mcpe_version_latest" translatable="false">0.14.0</string>
 </resources>

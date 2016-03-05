@@ -21,13 +21,48 @@ import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.widget.Toast;
 
+import java.util.regex.Pattern;
+
 import dev.hellpie.mcpe.addongen.R;
 
 public class Validator {
 
     public static boolean validateAddonName(@NonNull String name, Context caller) {
-        if (name.length() > 50) {
-            alertAndReturn(R.string.senpai_too_long)
+        return ((name.length() <= 50) || alertAndReturn(R.string.name_too_long, caller));
+    }
+
+    public static boolean validatePackageId(@NonNull String packageId, Context caller) {
+        Pattern javaPkg = Pattern.compile("^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9]+)+[a-z0-9_]$");
+        return javaPkg.matcher(packageId).matches() || alertAndReturn(R.string.package_not_valid, caller);
+    }
+
+    public static boolean validateMCPEVersion(@NonNull String version, @NonNull Context caller) {
+        Pattern mcpeVer = Pattern.compile("^\\d+\\.\\d+\\.\\d+(\\.b\\d+)?$");
+
+        if (!mcpeVer.matcher(version).matches()) {
+            return alertAndReturn(R.string.version_not_valid, caller);
+        }
+
+        int latest = 0;
+        int given = 0;
+
+        String[] latest_split = caller.getString(R.string.mcpe_version_latest).split("\\.");
+        String[] given_split = version.split("\\.");
+
+        for (int i = 0; i < latest_split.length; i++) {
+            latest += Integer.parseInt(latest_split[i]) * 10 ^ i;
+        }
+
+        for (int i = 0; i < given_split.length; i++) {
+            given += Integer.parseInt(given_split[i]) * 10 ^ i;
+        }
+
+        if (latest > given) {
+            return alertAndReturn(R.string.version_obsolete, caller);
+        } else if (latest < given) {
+            return alertAndReturn(R.string.version_unreleased, caller);
+        } else {
+            return true;
         }
     }
 
