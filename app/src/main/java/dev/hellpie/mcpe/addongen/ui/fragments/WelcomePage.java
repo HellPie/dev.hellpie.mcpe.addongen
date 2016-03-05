@@ -16,12 +16,18 @@
 
 package dev.hellpie.mcpe.addongen.ui.fragments;
 
+import android.view.View;
+
 import dev.hellpie.mcpe.addongen.R;
 
 public class WelcomePage extends Page {
 
+    public WelcomePage(String name) {
+        super(name);
+    }
+
     @Override
-    protected void onPageInit() {
+    protected void onPageInit(View page) {
 
     }
 
@@ -43,5 +49,15 @@ public class WelcomePage extends Page {
     @Override
     protected final int getInflatableLayout() {
         return R.layout.page_welcome;
+    }
+
+    @Override
+    protected String getTitleId() {
+        return null;
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

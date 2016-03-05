@@ -16,6 +16,35 @@
 
 package dev.hellpie.mcpe.addongen.addon;
 
-public class AddonData {
+import android.support.annotation.NonNull;
 
+public final class AddonData {
+
+    private String addonName;
+    private String packgeID;
+    private String mcpeVersion;
+
+    public String getAddonName() {
+        return addonName;
+    }
+
+    public void setAddonName(@NonNull String addonName) {
+        this.addonName = addonName;
+    }
+
+    public String getPackgeID() {
+        return packgeID;
+    }
+
+    public void setPackgeID(@NonNull String packgeID) {
+        this.packgeID = packgeID;
+    }
+
+    public String getMcpeVersion() {
+        return mcpeVersion;
+    }
+
+    public void setMcpeVersion(@NonNull String mcpeVersion) {
+        this.mcpeVersion = mcpeVersion;
+    }
 }

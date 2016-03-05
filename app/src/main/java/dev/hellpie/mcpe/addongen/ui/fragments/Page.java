@@ -19,11 +19,20 @@ package dev.hellpie.mcpe.addongen.ui.fragments;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.StringRes;
+import android.view.View;
 
-public abstract class Page extends Activity {
+import dev.hellpie.mcpe.addongen.R;
 
-    public Page() {
+public abstract class Page extends Activity implements View.OnClickListener {
 
+    public static final String PAGE_NAME = "dev.hellpie.mcpe.addongen.ui.fragments.Page.PAGE_NAME";
+
+    @StringRes
+    private final int name;
+
+    public Page(@StringRes int name) {
+        this.name = name;
     }
 
     @Override
@@ -31,9 +40,18 @@ public abstract class Page extends Activity {
         super.onCreate(savedInstanceState);
 
 
+        findViewById(R.id.bottom_bar_back).setOnClickListener(this);
+        findViewById(R.id.bottom_bar_next).setOnClickListener(this);
+
+        onPageInit(findViewById(R.id.container));
     }
 
-    protected abstract void onPageInit();
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    protected abstract void onPageInit(View page);
     protected abstract void onPageSave();
 
     protected abstract boolean onBackPage();
@@ -41,4 +59,6 @@ public abstract class Page extends Activity {
 
     @LayoutRes
     protected abstract int getInflatableLayout();
+
+    public abstract String getKey();
 }
